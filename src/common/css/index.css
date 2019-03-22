@@ -1,0 +1,13 @@
+@import '../../../node_modules/antd/dist/antd.css';
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+#root,.wrapper {
+    width: 100%;
+    height: 100%;
+   
+}
