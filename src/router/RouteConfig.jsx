@@ -14,64 +14,77 @@ const RouteConfig = [
     {
         title: "首页",
         path: "/Home",
+        defaultRedirect: true,
         component: Home,
         children: [
             {
-                key:"1",
+                key: "1",
+                defaultRedirect: true,
+
                 title: "首页",
                 path: "/Home/one",
                 component: UserHome,
             },
             {
-                key:"sub1",
+                key: "sub1",
                 title: "订单管理",
                 path: "/Home/order",
                 component: Order,
                 children: [
                     {
-                        key:"2",
+                        defaultRedirect: true,
+
+                        key: "2",
                         title: "贷款订单",
                         path: "/Home/order/loans",
                         component: Loans,
                     },
                     {
-                        key:"3",
+                        key: "3",
                         title: "转单订单",
                         path: "/Home/order/transfer",
                         component: Transfer,
                     },
                     {
-                        key:"4",
+                        key: "4",
                         title: "保险订单",
                         path: "/Home/order/insurance",
                         component: Insurance,
+                    },
+                    {
+                        path: "/Home/order",
+                        redirect: "/Home/order/loans"
                     }
                 ]
             },
             {
-                key:"5",
+                key: "5",
                 title: "财务管理",
                 path: "/Home/finance",
                 component: Finance,
             }
             ,
             {
-                key:"6",
+                key: "6",
                 title: "组织架构",
                 path: "/Home/tissue",
                 component: Tissue,
             },
             {
-                key:"7",
+                key: "7",
                 title: "数据统计",
                 path: "/Home/statistics",
                 component: Statistics,
             },
             {
-                key:"8",
+                key: "8",
                 title: "商务管理",
                 path: "/Home/business",
                 component: Business,
+            },
+            {
+                path: "/Home",
+                redirect: "/Home/one"
             }
         ]
     },
@@ -79,6 +92,9 @@ const RouteConfig = [
         title: "登陆",
         path: "/Login",
         component: Login,
+    }, {
+        path: "/",
+        redirect: "/Home"
     }
 ]
 export default RouteConfig;

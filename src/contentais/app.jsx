@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router } from "react-router-dom"
 
 import RouteConfig from '../router/RouteConfig';
-import { BrowserRouter as Router } from "react-router-dom"
 import RouteView from './../router/RouteView';
 class App extends Component {
     render() {
